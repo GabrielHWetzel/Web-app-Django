@@ -5,7 +5,7 @@ from .models import Form
 from django.core.mail import EmailMessage
 
 
-def index(request):
+def job(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -28,7 +28,7 @@ def index(request):
             email_message.send()
 
             messages.success(request, "Form submitted successfully!")
-    return render(request, "index.html")
+    return render(request, "job.html")
 
 def about(request):
     return render(request, "about.html")

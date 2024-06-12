@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Menu Item</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1 class="pt-5"> {{ item.meal }}</h1>
+    <p> {{ item.category }} </p>
+    <p> {{ item.description }} </p>
+    <p class="badge bg-primary rounded-pill">{{ item.price }}</p>
+</div>
+{% endblock content %}
